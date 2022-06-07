@@ -1,4 +1,5 @@
 from datetime import date, timedelta
+import requests
 
 class Student: 
     """A student class as base for method testing"""
@@ -23,6 +24,10 @@ class Student:
 
     def alert_santa(self): 
         self.naughty_list = True
+
+
+    def apply_extension(self, days): 
+        self.end_date = self.end_date + timedelta(days=days)
 
     
     
